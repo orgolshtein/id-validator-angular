@@ -1,0 +1,15 @@
+<form id="id-input-container">
+    <input 
+        name="id-input"
+        type="text"
+        placeholder="הקלד/י מספר" 
+        [(ngModel)]="newInput"
+        maxlength="9"
+        (click)="clearValidator()"
+        (keypress)="clickOnEnter($event)"
+    >
+    <button
+        type="button"
+        (click)="$event.preventDefault(); updateNewInput()"
+    >תשובה</button>
+</form>
