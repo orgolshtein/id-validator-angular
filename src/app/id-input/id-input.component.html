@@ -2,7 +2,7 @@
     <input 
         name="id-input"
         type="text"
-        placeholder="הקלד/י מספר" 
+        [placeholder]="isHeb? 'הקלד/י מספר' : 'Type digits'" 
         [(ngModel)]="newInput"
         maxlength="9"
         (click)="clearValidator()"
@@ -12,5 +12,5 @@
         type="button"
         (click)="$event.preventDefault(); updateNewInput()"
         [disabled]="buttonDisabled"
-    >תשובה</button>
+    >{{buttonText}}</button>
 </form>
