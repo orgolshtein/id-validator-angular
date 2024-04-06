@@ -8,6 +8,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class IdInputComponent implements OnInit{
   @Output() updateInput = new EventEmitter<string>();
   @Output() clearVal = new EventEmitter<boolean>();
+  newInput: string = "";
+  
   constructor() { }
   
   ngOnInit(): void {
@@ -20,14 +22,13 @@ export class IdInputComponent implements OnInit{
     }
   }
 
-  newInput = "";
-
   updateNewInput(){
     this.updateInput.emit(this.newInput);
   }
 
   clearValidator(){
     this.clearVal.emit(true);
+    setTimeout(()=>{this.clearVal.emit(false)},100)
   }
   
 }

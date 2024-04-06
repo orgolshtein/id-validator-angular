@@ -12,20 +12,18 @@
     או הקלד/י 9 ספרות ולחץ/י "תשובה" כדי לאמת את מספר הזהות המלא
   </h3>
   <id-input
-    (updateInput)="validate($event)"
-    (clearVal)="clearVal($event)"
+    (updateInput)="setNewvalue($event)"
+    (clearVal)="clearDirective($event)"
   ></id-input>
   <validator
     [inputTxt]="inputTxt"
-    [output]="output"
-    [sum]="sum"
-    [color]="color"
-    [msg]="msg"
-    [outputTxt]="outputTxt"
-    [isError]="isError"
+    [isValidatorCleared]="isValidatorCleared"
   ></validator>
   <div id="footer">
-    <p>נבנה על ידי אור גולשטיין: <a href="https://github.com/orgolshtein" target="_blank">github.com/orgolshtein</a></p>
+    <p>נבנה על ידי אור גולשטיין: <a 
+      href="https://github.com/orgolshtein" 
+      target="_blank">github.com/orgolshtein
+    </a></p>
     <p><img src="assets/angular_logo.png" alt="angular-logo"></p>
   </div>
 </div>
