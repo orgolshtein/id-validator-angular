@@ -11,5 +11,6 @@
     <button
         type="button"
         (click)="$event.preventDefault(); updateNewInput()"
+        [disabled]="buttonDisabled"
     >תשובה</button>
 </form>
