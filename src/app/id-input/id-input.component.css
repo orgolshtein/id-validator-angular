@@ -1,8 +1,15 @@
-h2 {
-    font-size: 2em;
-    text-shadow: #030d029c 1px 0 3px;
+input{
+    margin: 30px;
+    width: 200px;
+    height: 30px;
+    background-color: #4b244864;
+    color: #ffffff;
 }
-  
+
+input::placeholder{
+    color: #aba7a7;
+}
+
 button {
     margin: 30px;
     border-radius: 8px;
@@ -14,13 +21,13 @@ button {
     background-color: #774b76;
     cursor: pointer;
     transition: border-color 0.25s;
-    color: rgba(255, 255, 255, 0.87);
+    color: #ffffff;
     box-shadow: #000000 0 1px 5px;
 }
 
 button:hover {
     background-color: #4D3C77;
-    color: rgba(125, 125, 125, 0.87);
+    color: #7d7d7dde;
 }
 
 button:focus, button:focus-visible {
@@ -29,29 +36,6 @@ button:focus, button:focus-visible {
 
 button:disabled {
     background-color: #4D3C77;
-    color: rgba(125, 125, 125, 0.87);
+    color: #7d7d7dde;
     cursor: default;
-}
-
-input{
-    margin: 30px;
-    width: 200px;
-    height: 30px;
-    background-color: #4b244864;
-    color: rgba(255, 255, 255, 0.87);
-}
-
-input::placeholder{
-    color: #aba7a7;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-  appearance: textfield;
 }

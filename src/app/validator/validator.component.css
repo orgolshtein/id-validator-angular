@@ -1,21 +1,12 @@
 div {
     height: 80px;
+    text-shadow: #030d029c 2px 0 3px;
 }
 
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-    margin: 30px;
-    color: #ffffff;
-    text-shadow: #030d029c 1px 0 3px;
-}
-  
 h2 {
     font-size: 2em;
-    text-shadow: #030d029c 1px 0 3px;
 }
 
 h3 {
     color: #ffffff;
-    text-shadow: #030d029c 1px 0 3px;
 }

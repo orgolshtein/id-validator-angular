@@ -29,7 +29,6 @@ export class AppComponent implements OnInit{
   constructor() { };
 
   ngOnInit(): void {
-    // document.title = `${this.mainText.title} | JavaScript`;
   }
 
   switchLang(){
