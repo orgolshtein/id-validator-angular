@@ -15,10 +15,10 @@ interface ValidatorTexts {
 })
 export class ValidatorComponent implements OnInit{
   validatorTexts: ValidatorTexts = {
-    onlyDigits: "יש להקליד מספרים בלבד",
+    onlyDigits: 'יש להקליד מספרים בלבד',
     invalid: (x) => `מספר הזהות ${x.padStart(9, '0')} לא תקין`,
     valid: (x) => `מספר הזהות ${x.padStart(9, '0')} תקין`,
-    ready: "הקלד ספרות כדי לקבל את ספרת הביקורת",
+    ready: 'הקלד ספרות כדי לקבל את ספרת הביקורת',
     controlDigit: (x) => `ספרת הביקורת עבור ${x.padStart(8, '0')} היא`
   }
   @Input() isHeb!: boolean;
@@ -47,35 +47,35 @@ export class ValidatorComponent implements OnInit{
     if (changes['isHeb']){
       changes['isHeb']['currentValue'] ?
       this.validatorTexts = {
-        onlyDigits: "יש להקליד מספרים בלבד",
+        onlyDigits: 'יש להקליד מספרים בלבד',
         invalid: (x) => `מספר הזהות ${x.padStart(9, '0')} לא תקין`,
         valid: (x) => `מספר הזהות ${x.padStart(9, '0')} תקין`,
-        ready: "הקלד ספרות כדי לקבל את ספרת הביקורת",
+        ready: 'הקלד ספרות כדי לקבל את ספרת הביקורת',
         controlDigit: (x) => `ספרת הביקורת עבור ${x.padStart(8, '0')} היא`
       } :
       this.validatorTexts = {
-        onlyDigits: "Only digits please",
+        onlyDigits: 'Only digits please',
         invalid: (x) => `ID ${x.padStart(9, '0')} is invalid`,
         valid: (x) => `ID ${x.padStart(9, '0')} is valid`,
-        ready: "Type digits to receive the control digit",
+        ready: 'Type digits to receive the control digit',
         controlDigit: (x) => `The control digit for ${x.padStart(8, '0')} is`
       }
     }
   }
 
   clear(){
-    this.h3Output = "";
-    this.h2Output = "";
+    this.h3Output = '';
+    this.h2Output = '';
   }
 
   validate(newInput: string){
     this.counter = 0;
     this.sum = 0;
-    let inputArray: number[] = newInput.padStart(8, '0').split("").map(Number);
+    let inputArray: number[] = newInput.padStart(8, '0').split('').map(Number);
     let controlArray: number[] = [1,2,1,2,1,2,1,2,1];
     inputArray.forEach((digit: number, i: number)=>{
       (digit * controlArray[i]) > 9 ?
-      this.sum += (digit * controlArray[i]).toString().split("").map(Number).reduce((a, b) => a + b)
+      this.sum += (digit * controlArray[i]).toString().split('').map(Number).reduce((a, b) => a + b)
       : this.sum += (digit * controlArray[i]);
     });
     for (this.counter = 0; this.counter < 10; this.counter++){

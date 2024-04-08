@@ -33,9 +33,9 @@ export class AppComponent implements OnInit{
 
   switchLang(){
     this.clearDirective(true);
-    if ((document.querySelector("#lang-selector") as HTMLInputElement).value === "hebrew"){
+    if ((document.querySelector('#lang-selector') as HTMLInputElement).value === 'hebrew'){
         this.isHeb = true;
-        (document.querySelector("#main-container") as HTMLInputElement).classList.add("he-text");
+        (document.querySelector('#main-container') as HTMLInputElement).classList.add('he-text');
         this.mainText = {
           title: 'אימות מספר זהות',
           line1: 'הקלד/י עד 8 ספרות ולחץ/י "תשובה" כדי לקבל את ספרת הביקורת',
@@ -44,7 +44,7 @@ export class AppComponent implements OnInit{
         }
     } else {
       this.isHeb = false;
-        (document.querySelector("#main-container") as HTMLInputElement).classList.remove("he-text");
+        (document.querySelector('#main-container') as HTMLInputElement).classList.remove('he-text');
         this.mainText = {
           title: 'Israeli ID Validator',
           line1: 'Type up to 8 digits and click "Answer" to receive the control digit',

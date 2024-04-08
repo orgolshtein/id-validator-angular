@@ -9,8 +9,8 @@ export class IdInputComponent implements OnInit{
   @Input() isHeb!: boolean;
   @Output() updateInput = new EventEmitter<string>();
   @Output() clearVal = new EventEmitter<boolean>();
-  newInput: string = "";
-  buttonText: string = "תשובה";
+  newInput: string = '';
+  buttonText: string = 'תשובה';
   buttonDisabled: boolean = false;
   
   constructor() { }
@@ -20,13 +20,13 @@ export class IdInputComponent implements OnInit{
 
   ngOnChanges(changes: SimpleChanges){
     changes['isHeb']['currentValue'] ?
-    this.buttonText = "תשובה" : this.buttonText = "Answer";
+    this.buttonText = 'תשובה' : this.buttonText = 'Answer';
   }
 
   clickOnEnter(event: any){
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
         event.preventDefault();
-        document.querySelector("button")!.click();
+        document.querySelector('button')!.click();
     }
   }
 

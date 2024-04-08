@@ -1,4 +1,4 @@
-#lang-selector{
+#lang-selector {
     position: absolute;
     top: 0;
     right: 20px;
@@ -17,7 +17,7 @@
     text-shadow: #000000 2px 0 3px;
 }
 
-.he-text{
+.he-text {
     direction: rtl;
 }
   
@@ -28,7 +28,7 @@ h1 {
     color: #ffffff;
 }
 
-#footer, a{
+#footer, a {
     color: #ffffff;
     font-size: 90%;
     font-weight: 600;
