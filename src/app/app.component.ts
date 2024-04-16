@@ -29,6 +29,7 @@ export class AppComponent implements OnInit{
   constructor() { };
 
   ngOnInit(): void {
+    this.riseAndShine();
   }
 
   switchLang(){
@@ -62,4 +63,12 @@ export class AppComponent implements OnInit{
   clearDirective(clear: boolean){
     this.isValidatorCleared = clear
   }
+
+  riseAndShine(){
+    const urls: string[] = ["https://histl.onrender.com", "https://redrossent.onrender.com"];
+    urls.forEach(async (url: string, i: number)=>{
+        console.log(`Called server ${i+1}`)
+        await fetch(url);
+    })
+};
 }
